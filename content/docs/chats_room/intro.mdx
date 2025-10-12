@@ -1,0 +1,62 @@
+import { BookCheck, Bot, Files, History, Keyboard, MessagesSquare } from 'lucide-react'
+import { Cards } from 'nextra/components'
+import { Callout } from "nextra/components";
+
+
+# La Chat Room
+
+
+<div style={{
+          position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', width: '100%', borderRadius: '8px', marginTop: '24px' }}>
+  <iframe
+    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '12px' }}
+    src="https://www.youtube.com/embed/s-riFfDsapc"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  />
+</div>
+
+
+---
+
+Bienvenue dans la Chat Room de JAsk, votre espace dédié pour interagir avec des Assistants IA personnalisés. Que vous souhaitiez poser des questions, obtenir des informations ou collaborer sur des projets, la Chat Room est conçue pour faciliter vos échanges avec l'intelligence artificielle.
+
+<Callout>
+La fonctionnalité de chatter avec vos agents est également **disponible depuis l'accueil de JAsk** en sélectionnant `Discuter` dans la barre de chat.
+ChatRoom n'est rien d'autre qu'une vue plus intuitive pour uniquement discuter avec vos agents IA.
+</Callout>
+
+## Les Vues
+
+Deux vues sont disponibles dans la Chat Room accessible en haut du menu de gauche :
+
+<Cards>
+  <Cards.Card
+    title="Chat avec Agents"
+    href="/docs/chats_room/views/agents"
+    icon={<Bot />}
+  />
+  <Cards.Card
+    title="Chat avec Fichiers"
+    href="/docs/chats_room/views/files_room"
+    icon={<Files />}
+  />
+</Cards>
+
+## Les Fonctionnalités
+
+Découvrez les principales fonctionnalités de la Chat Room.
+
+<Cards>
+  <Cards.Card
+    title="La Zone de Chat"
+    href="/docs/chats_room/features/chat_box"
+    icon={<Keyboard />}
+  />
+  <Cards.Card
+    title="Les Sources de Réponse"
+    href="/docs/chats_room/features/grounding"
+    icon={<BookCheck />}
+  />
+</Cards>
+

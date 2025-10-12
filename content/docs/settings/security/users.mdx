@@ -1,0 +1,39 @@
+import { Callout } from 'nextra/components'
+
+# Utilisateurs
+
+<Callout type="info">
+Si vous possédez le rôle `Utilisateurs`, vous avez accès à la liste des utilisateurs qui peuvent se connecter et utiliser JAsk dans votre organisation.
+</Callout>
+
+JAsk est connecté à votre Microsoft Entra et il est donc nécessaire que le compte de l'utilisateur y soit présent.
+
+![image.png](@public/image.png)
+
+Le tableau présente tous les utilisateurs connus de JAsk.
+
+Avant qu'un collaborateur puisse bénéficier de la puissance de JAsk, il faut que JAsk l'enregistre.
+Il existe deux solutions pour cela : soit l'utilisateur accède à l'url de JAsk et le compte est créé (les informations nécessaires à JAsk sont récupérées automatiquement de votre Microsoft Entra). Les utilisateurs n'ont pas encore de rôle affecté. Cette affectation est nécessaire et est opérée par un administrateur de JAsk.
+
+L'autre possibilité est de créer un utilisateur via la fonction de création détaillée ici.
+
+## Création d'un utilisateur
+
+Depuis l'interface de gestion des utilisateurs de JAsk, l'administrateur crée un compte avec leur mail de connexion (Microsoft Entra) avec les rôles souhaités.
+
+![image.png](@public/image%201.png)
+
+Le lien sera fait automatiquement lors de leur première connexion à JAsk via ce mail. 
+À minima, un utilisateur doit avoir le rôle Espace de travail.
+
+Pour plus d'informations sur les rôles, consultez la page [Gestion des rôles](/security/roles.mdx).
+
+## Édition et suppression des utilisateurs
+
+À tout moment, il est possible de modifier les informations d'un utilisateur en cliquant sur le bouton bleu sur une ligne d'un compte.
+
+Vous pouvez ajouter ou retirer des rôles, modifier les noms et prénoms ainsi que le poste.
+
+Pour le supprimer, cliquez sur le bouton rouge. Il vous faudra valider cette action avant qu'elle soit prise en compte.
+
+![image.png](@public/image%202.png)

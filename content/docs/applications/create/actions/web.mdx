@@ -1,0 +1,42 @@
+# Les actions Web
+
+![application_web](@public/applications/web.png)
+
+## Les fonctionnalités
+
+Trois actions sont disponibles pour faire des requêtes HTTP :
+
+* Requête HTTP
+* Scrapping du texte d'une page web
+* Téléchargement d'un fichier sur le web
+
+### Requête HTTP
+
+Cette action vous permet de faire une requête HTTP à une URL donnée.
+
+![application_web](@public/applications/http.png)
+
+Pour utiliser cette action, cliquez sur le bouton `+` puis sur `Web` et enfin sur `Requête HTTP`.
+Une fois l'action dans le workflow, vous pouvez entrer l'URL de la requête HTTP, sélectionner le type d'opération HTTP (GET, POST, PUT, DELETE) et entrer les headers de la requête HTTP (Name & Value).
+
+### Scrapping du texte d'une page web
+
+Cette action vous permet de scraper le texte d'une page web.
+
+![application_web](@public/applications/scrapping.png)
+
+Pour utiliser cette action, cliquez sur le bouton `+` puis sur `Web` et enfin sur `Importer une page web`.
+Une fois l'action dans le workflow, vous pouvez entrer l'URL de la page web à scraper.
+
+L'action s'occupe de scraper le texte de la page web et de fournir en sortie tout le texte présent sur la page web.
+
+### Téléchargement d'un fichier sur le web
+
+Cette action vous permet de télécharger un fichier sur le web disponible en HTTPS.
+
+![application_web](@public/applications/download.png)
+
+Pour utiliser cette action, cliquez sur le bouton `+` puis sur `Web` et enfin sur `Télécharger un fichier web`.
+Une fois l'action dans le workflow, vous pouvez entrer l'URL du fichier à télécharger.
+
+L'action s'occupe de télécharger le fichier et d'extraire le contenu de celui-ci. La sortie de cette action est le contenu du fichier au format texte.

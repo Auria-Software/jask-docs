@@ -1,0 +1,121 @@
+import { Steps } from 'nextra/components'
+import { Cards } from 'nextra/components'
+import { Bot, Import, LibraryBig, Database, Search, FileSearch2, LucideImport, Save, Loop, SplitSquareVertical, Repeat2, FilePlus, Languages, BookDashed, ChevronsLeftRightEllipsis, Globe, Download, Mail, MessageCirclePlus } from 'lucide-react'
+
+# Création d'une application
+
+<div style={{
+          position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', width: '100%', borderRadius: '8px', marginTop: '24px' }}>
+  <iframe
+    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '12px' }}
+    src="https://www.youtube.com/embed/a4Jwl-gCRP4"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  />
+</div>
+
+---
+
+
+## Créer et partager une application
+
+Depuis la page `Applications` du catalogue de Jask, vous pouvez créer une application en appuyant sur le bouton `Actions` puis `Créer une application` en haut à droite.
+
+![application_create](@public/applications/create.gif)
+
+<Steps>
+
+### Contexte (premier élément par defaut)
+
+Le **`Contexte`** représente les données d'entrée de votre application. L'entrée peut être un texte écrit par l'utilisateur ou des documents téléchargés par l'utilisateur lançant l'application.
+
+Le contexte peut être utilisé tel quel dans le workflow ou peut être configuré en cliquant sur `Réglages avancés` pour modifier les variables du contexte.
+
+Il est possible de configurer :
+* **Type d'entrée** : permet de restreindre ce que l'utilisateur peut entrer dans le workflow au moment du lancement.
+* **Options supplémentaires** :
+  * Limiter le nombre de fichiers que l'utilisateur peut télécharger.
+  * Limiter le type de fichier en sélectionnant un format dans la liste déroulante.
+  * Inclure les métadonnées des fichiers téléchargés c'est à dire que dans le contenu de la première brique contexte, le nom du fichier sera inclus.
+  * Utiliser la vision IA pour extraire les informations de photos téléchargées ou de fichiers complexes comme des pdf. Sans vision IA, seul l'OCR sera utilisé.
+  * Texte à afficher au lancement de l'application pour guider l'utilisateur dans l'utilisation de l'application.
+
+
+![application_context](@public/applications/contexte.png)
+
+Ici sur cet exemple, le contexte accepte seulement du texte utilisateur et le texte à afficher au lancement de l'application est "Renseigner le nom du client / compte"
+### Enchaîner les actions
+
+Une fois le contexte configuré, vous pouvez enchainer les actions en cliquant sur le bouton `+` en haut à gauche de l'écran.
+Il existe une multitude d'actions à disposition pour construire votre workflow métier.
+Chaque action peut prendre en compte des entrées (inputs) et/ou des sorties (outputs) représentées par des connexions (pins) situées des deux côtés de l'action. Ils vous simplifieront la connexion de l'action ajoutée au reste du workflow.
+
+Les connexions situées à gauche de l'action sont des entrées de données qui vont permettre à l'action de s'exécuter.
+Les connexions situées à droite de l'action sont des sorties de données qui vont permettre de récupérer les résultats de l'action.
+Vous pouvez aussi enchaîner les actions en les connectant entre elles.
+Pour cela, vous pouvez cliquer sur la connexion située à droite de l'action et le relier à un petit point situé à gauche d'une autre action.
+Les entrées de données de l'action connectée seront automatiquement remplies avec les sorties de données de l'action précédente.
+
+![application_chain](@public/applications/actions.png)
+
+Il existe plusieurs types d'actions et voici la documentation pour chacune d'entre elles :
+
+* **Actions de base**
+
+<Cards>
+  <Cards.Card
+    title="Prompts Store"
+    href="/docs/applications/create/actions/prompts_store"
+    icon={<LibraryBig/>}
+  />
+  <Cards.Card
+    title="Appeler un Assistant"
+    href="/docs/applications/create/actions/assistants"
+    icon={<Bot />}
+  />
+  <Cards.Card
+    title="Sources de données"
+    href="/docs/applications/create/actions/data_sources"
+    icon={<Database/>}
+  />
+  <Cards.Card
+    title="Envoyer un mail"
+    href="/docs/applications/create/actions/mail"
+    icon={<Mail/>}
+  />
+</Cards>
+
+* **Actions avancées**
+<Cards>
+  <Cards.Card
+    title="Structure de contôle (Découper, Boucler)"
+    href="/docs/applications/create/actions/control_structure"
+    icon={<SplitSquareVertical/>}
+  />
+  <Cards.Card
+    title="Production de documents (Templates)"
+    href="/docs/applications/create/actions/document_production"
+    icon={<FilePlus/>}
+  />
+  <Cards.Card
+    title="Web (Requête HTTP, Scrapping)"
+    href="/docs/applications/create/actions/web"
+    icon={<Globe/>}
+  />
+  <Cards.Card
+    title="Tâches prédéfinies (Words)"
+    href="/docs/applications/create/actions/task"
+    icon={<MessageCirclePlus/>}
+  />
+</Cards>
+
+### Enregistrer l'application
+
+Une fois le workflow testé et validé, vous pouvez l'enregistrer en cliquant sur l'icône `Fusée` en haut à droite.
+
+Vous pouvez lui donner un nom et une description puis choisir un tag pour qu'elle soit triée dans la bonne section du catalogue d'applications. 
+Enfin, définissez la visibilité de l'application : Toute l'organisation, Moi uniquement ou Personnalisé (Utilisateurs et Groupes spécifiques).
+
+![application_save](@public/applications/deploy.png)
+
+</Steps>

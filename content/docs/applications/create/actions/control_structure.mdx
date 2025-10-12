@@ -1,0 +1,53 @@
+import { Callout } from 'nextra/components'
+
+# Les structures de contrôle
+
+Les structures de contrôle sont des actions qui permettent de contrôler le flux de l'application. Elles sont très utilisées pour créer des applications complexes où le nombre de documents en entrée est très élevé ou que les documents sont très longs.
+
+<Callout type="info">
+Les modèles d'IA ont une limite de taille de texte en entrée pour une requête et si le document est trop long, il peut ne pas être traité correctement.
+</Callout>
+
+Deux actions sont disponibles pour permettre de traiter ces cas de grosse quantité de documents :
+
+## Les fonctionnalités
+
+
+### La découpe
+
+La découpe est une action qui permet de découper un ou des documents déposés en entrée dans le contexte en plusieurs parties.
+
+<Callout type="info">
+Si vous avez plusieurs documents en entrée, ils seront découpés en parties indépendantes.
+</Callout>
+
+![application_split](@public/applications/cut.png)
+
+
+Vous avez le choix de découper le(s) document(s) en Pages, Caractères ou Tokens. Pour chacun des types de découpe vous pouvez modifier le nombre de celui-ci par découpe.
+
+À gauche de l'action vous pouvez y faire entrer le contexte par exemple et à droite la sortie sera une liste d'éléments dont la taille dépend de la découpe.
+
+### La boucle
+
+La boucle est une action permettant d'exécuter un prompt sur une liste d'éléments. Elle est principalement utilisée pour traiter des documents de grande taille et se place après une découpe pour traiter chaque élément résultant de la découpe.
+Le but étant d'exécuter un prompt sur chaque partie du document.
+
+<Callout>
+Il est possible de faire un traitement parallèle de chaque partie du document en sélectionnant le nombre d'éléments traités parallèlement dans la boucle (entre 1 et 10).
+</Callout>
+
+![application_loop](@public/applications/loop.png)
+
+
+## Tips pour traiter des documents de grande taille
+
+Si vous avez plusieurs documents en entrée ou des documents de grande taille que vous ne pouvez pas traiter avec un seul appel à l'IA, vous pouvez utiliser la découpe et la boucle pour traiter des petits morceaux de documents puis consolider le tout en une seule réponse.
+
+
+![application_loop](@public/applications/tips.png)
+
+Ici dans l'exemple, on part du principe que l'utilisateur va déposer un expert call au format PDF de 100 pages. On va le découper toutes les 2 pages (50 parties) pour ensuite exécuter une boucle pour traiter chaque partie du document avec un prompt d'analyse de l'expert call.
+
+Ensuite il est possible de consolider le tout en une seule réponse en utilisant un prompt avec comme instruction "Consolider les résultats de chaque partie du document".
+

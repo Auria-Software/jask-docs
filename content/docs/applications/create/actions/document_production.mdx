@@ -1,0 +1,58 @@
+import { Callout } from 'nextra/components'
+
+
+# Générer des documents
+
+![application_document_production](@public/applications/generate.png)
+
+## Les fonctionnalités
+
+Trois actions sont disponibles pour générer des documents :
+
+* Traduire un document à partir d'un document
+* Générer un document de zéro à partir d'un texte
+* Générer un document à partir d'un template à partir d'un texte
+
+### Traduire un document
+
+Cette action vous permet de traduire un document tout en gardant le format du document original. Il accepte en entrée un document (Soit depuis le [contexte](/docs/applications/create/intro#etape-1--contexte-premier-élément-par-defaut), soit depuis le [moteur de recherche](/docs/applications/create/actions/data_sources) etc...).
+
+<Callout type="warning">
+La traduction est effectuée uniquement pour les documents Word et PowerPoint.
+</Callout>
+
+![application_document_production](@public/applications/translate.png)
+
+Pour utiliser cette action, cliquez sur le bouton `+` puis sur `Production de documents` et enfin sur `Traduire un document`.
+Une fois l'action dans le workflow, vous pouvez sélectionner la langue de traduction (Anglais, espagnol, etc...), donner un nom à votre document traduit et choisir un dossier de sauvegarde ainsi que la source de données dans laquelle vous souhaitez stocker votre document traduit.
+
+
+### Générer un document de zero
+
+Cette action vous permet de générer un document à partir d'un texte et de le stocker dans votre source de données choisie.
+
+<Callout type="info">
+Le document généré est basique pour l'instant mais il sera bientôt possible de générer un document avec un format plus avancé.
+</Callout>
+
+![application_document_production](@public/applications/generateppt.png)
+
+Vous avez le choix du format du document généré :
+* Word
+* PowerPoint
+* Markdown
+* HTML
+
+Vous pouvez également choisir le nom du nouveau document, le chemin de sauvegarde ainsi que la source de donnée dans laquelle vous souhaitez stocker votre document.
+
+### Générer un document à partir d'un template
+
+Générer un document à partir d'un template consiste à utiliser un template d'entreprise préalabement chargé sur Jask et l'IA va remplacer les zones de textes par les données d'entrée de l'action.
+
+![application_document_production](@public/applications/template.png)
+
+Pour ce faire, il faut d'abord suivre le guide pour charger un template d'entreprise sur Jask : [Charger un template d'entreprise](/docs/templates/create)
+
+Cette opération une fois effectué, dans l'application, cliquez sur le bouton `+` puis sur `Production de documents` et sélectionnez le template d'entreprise que vous souhaitez utiliser. 
+Il ne vous reste plus qu'à brancher la sortie des actions contenant le contenu pour générer le template et les brancher à l'action `Template`.
+

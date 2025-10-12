@@ -1,0 +1,44 @@
+import { Cards } from 'nextra/components'
+import { Bot, Package, Workflow } from 'lucide-react'
+
+# Comprendre la terminologie de Jask
+
+Il existe 3 grands types de concepts dans Jask qu'un utilisateur peut créer et réutiliser :
+
+<Cards>
+  <Cards.Card
+    title="Les Assistants"
+    href="/chats_room/assistants"
+    icon={<Bot />}
+  />
+
+  <Cards.Card
+    title="Les Applications"
+    href="/applications/use"
+    icon={<Package />}
+  />
+
+  <Cards.Card
+    title="Les Expériences"
+    href="/applications/use"
+    icon={<Workflow />}
+  />
+</Cards>
+
+---
+
+### Lequel choisir ?
+
+#### Assistants
+
+Les [Assistants](/chats_room/assistants) sont utilisés pour répondre à des questions de type chat. Ils sont très utilisés pour faire des chatbots classiques. Ils peuvent accéder à des bases de connaissances et génèrent leurs réponses grâce à l'IA Générative à l'aide de modèles OpenAI, Claude, Mistral, etc.
+
+#### Applications
+
+Les [Applications](/applications/use) sont utilisées pour automatiser des processus métiers spécifiques. Elles sont très utilisées pour automatiser des tâches répétitives. Elles peuvent rappeler des assistants, lancer des prompts à l'IA et exécuter une suite d'actions prédéfinies à l'avance.
+
+#### Expériences
+
+Les [Expériences](/applications/use) sont utilisées pour créer des scénarios uniques dans le but de **faciliter l'utilisation de l'IA pour l'utilisateur final**.
+Elles permettent de guider l'utilisateur sur une tâche spécifique afin de lui poser les bonnes questions et d'appeler les bons assistants ou applications pour que ce soit transparent pour l'utilisateur.
+Les scénarios peuvent regrouper plusieurs use cases modélisés par une suite d'appels à des agents et applications sans que l'utilisateur final ne s'en rende compte.

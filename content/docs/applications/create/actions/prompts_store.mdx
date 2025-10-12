@@ -1,0 +1,36 @@
+import { Callout } from 'nextra/components'
+
+# Exécuter un prompt du Prompts Store
+
+Le prompt est une action qui fait appel à un modèle d'IA pour exécuter un prompt. Vous pouvez utiliser un prompt du Prompts Store ou créer un prompt personnalisé directement dans une application pour réaliser une tâche spécifique.
+
+<Callout type="info">
+Tout ce que vous reliez à gauche de l'action sera passé dans le prompt à l'IA. Ce qui sort à droite de l'action sera uniquement la réponse de l'IA.
+</Callout>
+
+![application_prompt_store](@public/applications/prompt.png)
+
+
+## Les fonctionnalités
+
+### Créer un prompt dans l'application
+
+Vous pouvez créer un nouveau prompt pour réaliser une tâche spécifique directement dans l'application en cliquant sur le bouton `+` puis sur `Prompts Store` et enfin sur `Nouveau Prompt`
+
+Une fois l'action disponible dans le workflow, vous pouvez le configurer en cliquant sur la petite flèche à droite de l'action. Entrez vos instructions dans la zone de texte, sélectionnez le modèle d'IA que vous souhaitez ainsi que sa température.
+Enfin, vous pouvez reliez un étape précédente à ce prompt pour passer la sortie de cette étape à l'IA.
+
+![application_prompt_store](@public/applications/new_prompt.png)
+
+### Utiliser un prompt du Prompts Store
+
+Vous pouvez réutiliser un prompt du Prompts Store en cliquant sur le bouton `+` puis sur `Prompts Store` et enfin sur le prompt que vous souhaitez utiliser.
+
+Une fois l'action disponible dans le workflow, vous pouvez lire le prompt entièrement en cliquant sur la petite flèche à droite de l'action. Sélectionnez le modèle d'IA que vous souhaitez ainsi que sa température puis reliez l'action précédente avec ce prompt pour passer du contexte à l'IA.
+
+<Callout>
+Tous les mots-clés entre [ ] dans le prompt apparaitront comme des variables dans l'action pour que vous puissiez les remplacer par des valeurs provenant des actions précédentes.
+</Callout>
+
+![application_prompt_store](@public/applications/variables.png)
+

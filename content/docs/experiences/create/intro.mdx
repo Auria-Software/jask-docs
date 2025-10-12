@@ -1,0 +1,60 @@
+import { Steps } from 'nextra/components'
+
+# Création d'une expérience
+
+<div style={{
+          position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', width: '100%', borderRadius: '8px', marginTop: '24px' }}>
+  <iframe
+    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '12px' }}
+    src="https://www.youtube.com/embed/ZwIh2cMWBkI"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  />
+</div>
+
+---
+
+## Créer et partager une Expérience
+
+Depuis la page Expériences du catalogue de JAsk, vous pouvez créer une expérience en appuyant sur le bouton “Actions” puis “Créer un scénario”. 
+
+*GIF Création d’un nouveau scénario*
+
+<Steps>
+### Déclencheur (premier élément par défaut)
+
+Chaque scénario doit commencer par un [déclencheur](/docs/experiences/create/actions/start), qui définit comment et quand le parcours sera lancé (à l’ouverture ou de manière périodique). 
+
+### Enchainer les actions
+
+La construction d’un scénario se fait simplement en drag and drop, et à la verticale. 
+
+Les actions se trouvent sur le menu latéral gauche et se répartissent en deux grandes familles : 
+
+- [**Actions utilisateur**](/docs/experiences/create/actions/human_action) : elles apparaissent directement dans le parcours et sollicitent l’interaction.
+- [**Actions internes**](/docs/experiences/create/actions/internal_action) : elles s’exécutent en arrière-plan pour enrichir ou automatiser le scénario.
+
+Chaque action a une entrée et/ou une sortie, toutes deux illustrées par de petits points. 
+
+- Le point du haut étant l’entrée - il permet de récupérer les informations du bloc précédent pour alimenter le bloc actuel.
+- Le point du bas étant la sortie - il permet de récupérer le résultat du bloc actuel pour alimenter le bloc suivant.
+
+Ces points sont à relier avec les points des actions précédentes et/ou suivantes, pour créer votre workflow. 
+
+💡 Vous avez la possibilité de changer l’intitulé de chaque brique, pour une meilleure visibilité. 
+
+### Sauvegarder et déployer le scénario
+
+Une fois votre scénario testé et validé, enregistrez-le grâce au bouton “Déployer” en haut à droite de l’écran. 
+
+Renseignez ensuite les informations demandées :
+
+- Le nom de l'expérience
+- La description de l'expérience
+- La visibilité de l'expérience
+- Le tag de l'expérience pour qu'il apparaisse dans la bonne section dans le catalogue
+
+![experience_save](@public/experiences/save.png)
+
+
+</Steps>

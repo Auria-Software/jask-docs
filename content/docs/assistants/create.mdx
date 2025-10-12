@@ -1,0 +1,144 @@
+import { Steps } from 'nextra/components'
+import { Callout } from 'nextra/components'
+
+# Création d'un assistant
+
+<div style={{
+          position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', width: '100%', borderRadius: '8px', marginTop: '24px' }}>
+  <iframe
+    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '12px' }}
+    src="https://www.youtube.com/embed/EmhZDGcNcmI"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  />
+</div>
+
+---
+
+Depuis la page `Assistants` du catalogue de JAsk, vous pouvez créer des assistants en appuyant sur le bouton `Actions` puis `Créer un assistant` en haut à droite.
+
+## Console de configuration
+Plusieurs éléments sont configurables pour créer un assistant :
+
+<Steps>
+### Étape 1 : Générales
+
+Dans cette étape, vous pouvez renseigner le nom de votre assistant, sa description, choisir un avatar et configurer sa visibilité.
+
+![assistant_general](@public/assistants/general.png)
+
+### Étape 2 : Connaissances
+
+Dans cette étape, vous pouvez choisir les sources de données que votre assistant pourra utiliser quand un utilisateur lui pose une question. Vous pouvez connecter une ou plusieurs sources de données.
+
+<Callout>
+Si vous ne connectez aucune source de données, votre assistant sera un simple LLM c'est à dire qu'il répondra uniquement à l'aide des connaissances d'entrainement que le modèle sélectionné a reçu.
+</Callout>
+
+![assistant_knowledge](@public/assistants/connaissance.gif)
+
+Chaque sources de données est paramétrable en fonction des données que vous voulez fournir à votre assistant. Par exemple, si vous connectez un Sharepoint, vous pouvez filtrer les dossiers que vous voulez utiliser.
+
+### Étape 3 : Intelligence
+
+Dans cette étape, vous configurez l'intelligence de votre assistant. Vous pouvez configurer :
+
+**Le modèle d'IA**
+
+Sélectionnez le modèle d'IA que votre assistant utilisera pour répondre aux questions. Dans la liste déroulante vous voyez les modèles d'IA auxquels vous avez accès.
+
+Ensuite configurez la température du modèle d'IA. La température est un paramètre qui permet de contrôler la créativité de la réponse de l'assistant. Plus la température est élevée (proche de 1), plus la réponse est créative et moins elle est conforme à la question posée. Une température élevée signifie que pour une même question, l'agent peut répondre de manière différente à chaque fois.
+
+**Rôle et Modération de cet assistant (Prompt System)**
+
+C'est ici que vous allez pouvoir configurer le `Prompt System` de votre assistant. Le prompt système est un prompt qui permet de contrôler le comportement de l'assistant. Le prompt système vous permet d'ajuster finement le comportement de votre assistant.
+
+<div style={{
+          position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', width: '100%', borderRadius: '8px', marginTop: '24px' }}>
+  <iframe
+    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '12px' }}
+    src="https://www.youtube.com/embed/DdGk4JcDwTk"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  />
+</div>
+
+**Options activables**
+
+Vous pouvez activer ou desactiver certaines options pour votre assistant :
+* Cites toujours tes sources (documents, liens, ...) : Cette option permet de référencer les sources de la réponse avec réponse fournie par l'assistant.
+* Suggères des questions liées à la fin : Cette option permet de suggérer des questions liées à la fin de la réponse séléctionnables par l'utilisateur pour continuer la discussion.
+* Détailles tes réponses avec la chaine de pensée : Cette option permet de détailler la réponse de l'assistant avec la chaine de pensée.
+* Utilises la terminologie interne : Cette option permet de utiliser la terminologie interne de l'entreprise dans les questions de l'utilisateur et les réponses de l'assistant. Par exemple : propale -> proposition commerciale.
+
+**Base de connaissances**
+
+Le RAG est un mécanisme qui permet à l'assistant de répondre aux questions en utilisant les documents qui lui sont exposés. Vous pouvez configurer le RAG de votre assistant afin d'obtenir les résultats les plus pertinents. 
+
+* La quantité de documents qui seront récupérés pour répondre à une question: `Dynamique` (mode automatique qui définit la quantité de document à utiliser) ou `Personnalisé` (vous définissez le nombre de documents que l'assistant peut récupérer à chaque requête).
+
+* Le degré de diversité des sources récupérées : `Dynamique` (mode automatique qui définit le niveau de diversité à considérer) ou `Minimum de diversités des sources (Top recherches)`(seules les sources les plus pertinentes sont considérées par l'agent) ou `Maximum de diversités des sources (MMR)` (L'agent diversifie au maximum les sources utilisées)
+
+### Étape 4 : Opérations Agentiques
+
+Dans cette étape, vous configurez les opérations agentiques de votre assistant. La différence entre un assistant et un agent est que l'agent peut prendre des décisions seul. 
+
+<Callout type="warning">
+Si vous activez le mode agentique, le **prompt system** de l'assistant n'est plus pris en compte.
+</Callout>
+
+Trois modes agentiques existent :
+
+* **Mode Defaut**
+
+Dans ce mode, l'agent peut utiliser l'ensemble des sources de données et extensions qui lui sont mis à disposition pour répondre au mieux à la question de l'utilisateur.
+
+<Callout>
+Activez des sources de données dans les connaissances de l'assistant pour voir les actions agentiques possibles dans la source de données.
+</Callout>
+
+![super_agent](@public/assistants/agent_default.png)
+
+* **Mode Super Agent**
+
+Dans ce mode, l'agent devient un chef d'équipe et son rôle est de déléguer les demandes des utilisateurs à des agents plus spécialisés.
+
+![super_agent](@public/assistants/super_agent.png)
+
+
+* **Mode Deep Agent**
+
+Dans ce mode, l'agent planifie chacune des demandes utilisateur en une série de tâches à effectuer puis exécute le plan de manière itérative.
+Ce mode est plus adapté pour des questions complexes qui nécessitent une recherche et une réflexion approfondies.
+
+Comme pour l'agent par défaut, vous avez la possibilité d'activer des opérations (sources de données et extensions) que l'agent peut effectuer.
+
+![deep_agent](@public/assistants/deep_agent.png)
+
+
+### Étape 5 : Sécurité & Gouvernance
+
+Dans cette étape, vous configurez la sécurité et la gouvernance de votre assistant.
+
+**Mode de contrôle d'accès aux ressources**
+
+    * **`Délégué à la source`** : le contrôle d'accès aux ressources est géré par la source de données. Par exemple, pour un agent connecté à l'entièreté d'un environnement Sharepoint, si deux utilisateurs n'ayant pas les mêmes droits dans le Sharepoint posent la même question, les réponses seront différentes. En effet, l'assistant répondra uniquement en prenant en compte les documents auxquels l'utilisateur posant la question a accès.
+
+    * **`Partage via Jask`** : le contrôle d'accès est géré via Jask. Dans ce cas, les deux utilisateurs auront la même réponse qui se basera sur l'entièreté des documents auxquels l'assistant a accès.
+
+
+**Utilisateurs et Groupes**
+
+Vous pouvez définir plus spécifiquement les utilisateurs et groupes qui auront accès à votre assistant.
+
+**Gouvernance**
+
+Vous pouvez décider de limiter la consommation d'un assistant par un utilisateur : 
+* Nombre de requêtes : Limiter le nombre de requêtes qu'un utilisateur peut envoyer à un assistant
+* Volumétrie de données : Limiter la quantité de données qu'un utilisateur peut consommer auprès d'un assistant (Nombre d'octets ou de tokens consommés)
+
+<Callout type="warning">
+Les valeurs d'utilisation par utilisateur ne sont pas réinitialisées automatiquement pour le calcul des limites.
+</Callout>
+
+</Steps>

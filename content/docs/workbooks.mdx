@@ -1,0 +1,85 @@
+# Les Carnets de Travail
+
+<div style={{
+          position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', width: '100%', borderRadius: '8px', marginTop: '24px' }}>
+  <iframe
+    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '12px' }}
+    src="https://www.youtube.com/embed/TWJmVB1Eo34"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  />
+</div>
+
+---
+
+Les carnets de travail (ou *workbooks*) sont des espaces qui permettent d’organiser vos recherches et vos interactions avec l’IA de manière **structurée et collaborative**.
+
+## Créer un nouveau carnet de travail
+
+Pour commencer, vous pouvez créer un carnet de travail depuis l’interface principale.
+
+![workbooks](@public/workbooks/screen.png)
+
+## Les Cellules : l’unité de base
+
+Les cellules sont les éléments fondamentaux d’un carnet de travail.
+
+* **1 cellule = 1 interaction avec l’IA**
+* Les cellules sont organisées par colonnes.
+* Vous pouvez en ajouter grâce au bouton `+ Nouveau` (en haut à droite) ou au bouton `+` (en bas de chaque cellule).
+
+![workbooks](@public/workbooks/default.png)
+
+
+### Types de cellules
+
+Il existe plusieurs types de cellules, selon vos besoins :
+
+* **Cellule par défaut** : interagissez avec un modèle d’IA de votre choix, sans connexion aux sources de données.
+
+![workbooks](@public/workbooks/default.png)
+
+* **Cellule Assistant** : envoyez une requête à un [assistant](/docs/chats_room/intro) connecté à vos données.
+
+![workbooks](@public/workbooks/assistant.png)
+
+* **Cellule Application** : exécutez une [application](/docs/applications/intro) de votre choix.
+
+![workbooks](@public/workbooks/application.png)
+
+* **Cellule Sources** : lancez une [recherche IA](/docs/ai_search/intro) sur une source de données connectée.
+
+![workbooks](@public/workbooks/sources.png)
+
+
+### Gestion des cellules
+
+* Une cellule par défaut est présente initialement pour démarrer rapidement.
+* Vous pouvez **supprimer une cellule** (icône *poubelle* en haut à droite).
+* Vous pouvez **renommer une cellule** (cliquer sur son titre).
+* Pour exécuter une cellule, cliquez sur le bouton **vert** en bas à droite.
+
+![workbooks](@public/workbooks/run.png)
+
+### Organiser et enchaîner vos cellules
+
+* Renommez le carnet en cliquant sur son titre (en haut à gauche).
+* Enchaînez les cellules pour structurer votre réflexion.
+* Relancez autant de fois que nécessaire.
+* Sur certaines cellules, choisissez le modèle d’IA mis à votre disposition depuis la liste déroulante.
+* Utilisez `Attacher une cellule` pour réutiliser les résultats d’une ou plusieurs cellules précédentes.
+
+![workbooks](@public/workbooks/attachment.png)
+
+
+## Sauvegarder et partager votre carnet
+
+Une fois votre travail terminé :
+
+* Cliquez sur les trois points (en haut à droite) puis sur **Sauvegarder** où utilisez le raccourci `ctrl+S`.
+* Partagez le carnet à vos collègues : ils pourront voir vos méthodes et **rejouer chaque cellule**.
+
+![workbooks](@public/workbooks/save.png)
+
+Vous pourrez retrouver tous vos carnet de travail ainsi que ceux qu'on vous a partagé sur la page d'accueil de Carnet de Travail.
+

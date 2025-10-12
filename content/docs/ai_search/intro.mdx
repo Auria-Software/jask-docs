@@ -1,0 +1,41 @@
+import {Callout} from 'nextra/components'
+import { Folder, FolderSearch2 } from 'lucide-react'
+import { Cards } from 'nextra/components'
+
+# Mes Documents
+
+<div style={{
+          position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', width: '100%', borderRadius: '8px', marginTop: '24px' }}>
+  <iframe
+    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '12px' }}
+    src="https://www.youtube.com/embed/rDp1qzwYwZU"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  />
+</div>
+
+---
+
+Bienvenue dans la page `Documents` de JAsk, votre espace dédié pour rechercher des documents dans les bases de connaissance de votre organisation.
+
+<Callout>
+La fonctionnalité de recherche de documents est également **disponible depuis l'accueil de Jask** en sélectionnant `Rechercher` dans la barre de chat.
+Documents n'est rien d'autre qu'une vue plus intuitive pour uniquement rechercher des documents dans les bases de connaissance de votre organisation.
+</Callout>
+
+## Les Fonctionnalités
+
+Découvrez les principales fonctionnalités de la page `Documents`.
+
+<Cards>
+  <Cards.Card
+    title="L'espace de stockage personnel"
+    href="/docs/ai_search/personnal"
+    icon={<Folder />}
+  />
+  <Cards.Card
+    title="La recherche IA de documents"
+    href="/docs/ai_search/search"
+    icon={<FolderSearch2 />}
+  />
+</Cards>

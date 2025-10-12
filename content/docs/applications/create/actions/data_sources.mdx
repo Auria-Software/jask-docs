@@ -1,0 +1,47 @@
+import { Callout } from 'nextra/components'
+
+# Utiliser les sources de données
+
+Vous pouvez utiliser les sources de données dans une application pour récupérer des informations.
+
+![application_data_sources](@public/applications/my_sources.png)
+
+## Les fonctionnalités
+
+Trois types d'actions sont possibles dans les sources de données.
+
+### Importer un fichier
+
+Vous pouvez importer un fichier statique dans l'application pour utiliser le contenu dans un [prompt](/docs/applications/create/actions/prompts_store) ou un [assistant](/docs/applications/create/actions/assistants) par exemple.
+
+![application_data_sources](@public/applications/import.png)
+
+Cliquez sur le bouton `+` puis `Mes sources de données` et enfin `Importer un fichier` pour importer un fichier. Une fois l'action créée dans le workflow, vous pouvez y déposer le fichier en son centre.
+
+Maintenant utilisez le contenu du fichier en le reliant à l'entrée d'un [prompt](/docs/applications/create/actions/prompts_store) ou d'un [assistant](/docs/applications/create/actions/assistants) par exemple.
+
+### Moteur de recherche
+
+Vous pouvez utiliser le moteur de recherche pour trouver un ou des documents dans vos sources de données puis les utiliser dans un [prompt](/docs/applications/create/actions/prompts_store) ou un [assistant](/docs/applications/create/actions/assistants) par exemple.
+
+<Callout type="info">
+La recherche se fait avec l'IA sur l'entièreté du document (metadata + contenu)
+</Callout>
+
+![application_data_sources](@public/applications/search.png)
+
+Cliquez sur le bouton `+` puis `Mes sources de données` et enfin `Moteur de recherche` pour créer l'action. Une fois l'action créée dans le workflow, vous devez choisir une source de données puis vous pouvez y entrer vos **mots-clés de recherche**, le nombre de documents entier à récupérer et la pertinence minimale à respecter.
+
+<Callout type="info">
+Si vous passez des éléments en entrée de l'action, le texte sera utilisé comme mots-clés de recherche.
+</Callout>
+
+La pertinence des résultats est calculée par le nombre de fois que le mot-clé de recherche apparaît dans le document.
+
+### Source de données
+
+Vous pouvez utiliser une source de données pour récupérer des informations dans une base de données. A la différence du moteur de recherche, la recherche dans une source de données renvoie différentes parties de documents contenant les éléments de réponses demandées.
+
+![application_data_sources](@public/applications/data_source.png)
+
+Cliquez sur le bouton `+` puis `Mes sources de données` et sélectionnez la source de donnée pour créer l'action. Une fois l'action créée dans le workflow, vous pouvez filtrer la source de données sur des dossiers.

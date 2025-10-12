@@ -1,0 +1,99 @@
+import { Callout } from 'nextra/components'
+import { Cards } from 'nextra/components'
+import { Bot, Search, Package, MessageSquare, MessagesSquare, FolderSearch2 } from 'lucide-react'
+
+# Commencer par l'Accueil
+
+<div style={{
+          position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', width: '100%', borderRadius: '8px', marginTop: '24px' }}>
+  <iframe
+    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '12px' }}
+    src="https://www.youtube.com/embed/-0HntMLmbDs"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  />
+</div>
+
+---
+
+La page d’Accueil de JAsk vous permet de consommer les fonctionnalités de JAsk de manière simple et intuitive.
+Vous y retrouverez `une barre de chat` ainsi que des `accès rapides` à vos ressources et outils préférés.
+
+
+## Les fonctionnalités
+
+La barre de chat est l'élément central de l'Accueil. Elle vous permet d'interagir avec **les assistants, de rechercher des documents et d'exécuter des applications**. Chacune de ces trois fonctionnalités est accessible via des `boutons` situés en bas à gauche de la barre de chat.
+L'accueil est conçu pour vous offrir une expérience fluide et intuitive, vous permettant de naviguer facilement entre les différentes fonctionnalités mais chacune d'entre elles possède sa propre page dédiée pour une utilisation plus avancée.
+Voici un aperçu des fonctionnalités disponibles :
+
+### 1. Discuter
+
+![discuter](@public/accueil/Accueil-Discuter.gif)
+
+Vous pouvez discuter avec [les assistants](assistants.mdx) que vous avez créés ou avec les assistants partagés par votre organisation.
+Choisissez un assistant dans la liste déroulante et commencez à poser vos questions.
+
+#### Discuter sur vos fichiers
+
+<Callout type="warning" emoji="⚠️">
+  Vous ne pouvez `importer des fichiers` que sur l'assistant par défaut appelé **JAsk**.
+</Callout>
+
+![discuter fichier](@public/accueil/Accueil-Discuter-File.gif)
+
+"Discutez" avec un ou plusieurs fichiers spécifiques que vous pouvez glisser et déposer ou importer depuis votre ordinateur.
+
+#### Utiliser un prompt du `Prompt Store`
+
+![discuter prompt](@public/accueil/Accueil-Discuter-PS.gif)
+
+Gagnez du temps en utilisant un prompt déjà sauvegardé dans le `Prompt Store` pour poser une question à l'un de vos assistants. Cliquez simplement sur le bouton `PS` dans la barre de chat et sélectionnez le prompt que vous souhaitez utiliser.
+
+
+### 2. Rechercher
+
+![rechercher](@public/accueil/Accueil-Rechercher.gif)
+
+Recherchez des documents dans les bases de connaissance de votre organisation.
+Entrez des `mots-clés` ou une `phrase` pour trouver des informations pertinentes grâce à l'IA.
+Vous pouvez **sélectionner une ou plusieurs sources de données** que vous souhaitez interroger dans la liste déroulante.
+
+
+### 3. Executer
+
+Une application est un workflow crée par vous ou votre organisation permettant de réaliser une tâche spécifique de manière automatique avec des prompts déjà définis.
+Vous pouvez sélectionner une application dans la liste déroulante et l'exécuter directement depuis la page d'accueil.
+
+## Enchainer les fonctionnalités
+
+Dans l'accueil, vous pouvez enchainer les fonctionnalités présentées précédemment pour réaliser des tâches complexes sans changer de pages.
+Par exemple, vous pouvez :
+- **Discuter** avec un assistant pour obtenir des informations, puis
+- **Rechercher** des documents pertinents, les sélectionner puis
+- **Exécuter** une application pour automatiser une tâche.
+
+<Callout>
+Chacune des 3 fonctionnalités a sa propre vue spécifique pour une utilisation plus avancée dans JAsk.
+</Callout>
+
+<Cards>
+  <Cards.Card
+    title="Chats Room"
+    href="/docs/chats_room/intro"
+    icon={<MessagesSquare />}
+  />
+
+  <Cards.Card
+    title="Mes Documents"
+    href="/docs/ai_search/intro"
+    icon={< FolderSearch2/>}
+  />
+
+  <Cards.Card
+    title="Applications"
+    href="/docs/applications/use"
+    icon={<Package />}
+  />
+</Cards>
+
+

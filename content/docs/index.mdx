@@ -1,0 +1,143 @@
+import { Cards } from 'nextra/components'
+import { Steps } from 'nextra/components'
+import { Callout } from 'nextra/components'
+import { Rocket,Home,Package, NotepadText, MessagesSquare, FolderSearch2, Bot, Workflow, LibraryBig, Database, KeyRound, Share2, BrainCircuit, BriefcaseBusinessIcon, Cog, ChartSpline, Cable, ChevronsLeftRightEllipsisIcon } from 'lucide-react';
+
+# Documentation JAsk
+
+
+**JAsk** une **plateforme unique, sécurisée et intuitive**, vos organisations et métiers créent **en quelques minutes** et en toute **autonomie** leurs propres assistants et workflows pour servir leurs enjeux business.
+
+
+### Par où commencer ?
+
+Suivez ces guides pour utiliser rapidement JAsk
+
+<Cards>
+  <Cards.Card
+    title="Utilisateur : Démarrage rapide dans l'Accueil"
+    href="/docs/accueil"
+    icon ={<Rocket/>}
+  />
+  <Cards.Card
+    title="Developpeur : Appeller JAsk via API"
+    href="/api/intro"
+    icon ={<ChevronsLeftRightEllipsisIcon/>}
+  />
+  <Cards.Card
+    title="Admin : Connecter la première DataSource"
+    href="/docs/settings/connectors/microsoft"
+    icon ={<Cable/>}
+  />
+</Cards>
+
+---
+
+# Le menu
+
+Le menu de JAsk se découpe en sections à partir desquelles vous avez accès à toute la puissance de l'IA Générative proposée par JAsk.
+
+<Steps>
+
+### Espace de travail
+
+L'Espace de travail est l'endroit où les utilisateurs accèdent aux fonctions quotidiennes de JAsk.
+Différentes vues permettent de bénéficier de la puissance de JAsk. Chacune d'elles possède ses propres avantages et répondent à des usages spécifiques.
+
+Découvrez les !
+Le menu de gauche vous permet de naviguer sous ``Espace de travail`` dans les vues suivantes :
+
+<Cards>
+  <Cards.Card
+    title="Accueil"
+    href="/docs/accueil"
+    icon ={<Home />}
+  />
+  <Cards.Card
+    title="Chat Room"
+    href="/docs/chats_room/intro"
+    icon={<MessagesSquare />}
+  />
+  <Cards.Card
+    title="Mes Documents"
+    href="/docs/ai_search/intro"
+    icon={<FolderSearch2 />}
+  />
+  <Cards.Card
+    title="Mes Projets"
+    href="/docs/projects"
+    icon={<BriefcaseBusinessIcon />}
+  />
+  <Cards.Card
+    title="Mes Carnets de Travail"
+    href="/docs/workbooks"
+    icon={<NotepadText />}
+  />
+</Cards>
+
+### Catalogue
+
+Les catalogues permettent de découvrir et de créer les ressources mises à disposition par votre organisation.
+
+Le menu de gauche vous permet de naviguer sous `Catalogue` dans les vues suivantes :
+
+<Cards>
+  <Cards.Card
+    title="Prompt Store"
+    href="/docs/prompts_store"
+    icon={<LibraryBig />}
+  />
+  <Cards.Card
+    title="Assistants"
+    href="/docs/assistants/create"
+    icon={<Bot />}
+  />
+  <Cards.Card
+    title="Applications"
+    href="/docs/applications/intro"
+    icon={<Package />}
+  />
+  <Cards.Card
+    title="Expériences"
+    href="/docs/experiences/create"
+    icon={<Workflow />}
+  />
+</Cards>
+
+### Administration
+
+<Callout type="warning">
+Cette section n’est disponible qu’aux utilisateurs avec le rôle `Administrateur`.
+</Callout>
+
+Les fonctions d’administration permettent de gérer les ressources, les droits et les utilisateurs.
+Vous pourrez également exposer vos assistants ou attacher de nouveaux modèles d’IA.
+
+Le menu de gauche vous permet de naviguer sous `Administration` dans les vues suivantes :
+
+<Cards>
+  <Cards.Card
+    title="Réglages"
+    icon={<Cog />}
+    href="/docs/settings/security/users"
+  />
+  <Cards.Card
+    title="Observabilité"
+    icon={<ChartSpline />}
+    href="/docs/observability"
+  />
+</Cards>
+
+
+</Steps>
+
+
+Vous remarquez également différentes icônes en haut à droite de JAsk.
+
+Elles permettent respectivement de :
+
+- Basculer en mode sombre ou clair,
+- D'activer ou désactiver le mode plein écran,
+- De basculer l'interface en Français ou en Anglais (d'autres langues seront prochainement proposées),
+- D'accéder aux notifications (un chiffre indique les notifications non lues),
+- De voir quel utilisateur est connecté et de vous déconnecter de JAsk en sélectionnant le choix du menu qui s'ouvre lorsque vous cliquez sur votre nom.

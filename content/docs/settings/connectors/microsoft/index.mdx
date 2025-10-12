@@ -1,0 +1,74 @@
+---
+title: Microsoft
+sidebarTitle: Microsoft
+asIndexPage: true
+---
+
+import { Callout } from 'nextra/components'
+import { Cards } from 'nextra/components'
+import { Steps } from 'nextra/components'
+
+
+# Intégrations d'applications Microsoft
+
+<Callout type="warning">
+Cette étape est **obligatoire** pour pouvoir connecter un SharePoint, un OneDrive ou un OneNote à Jask.
+</Callout>
+
+Ce guide vous donne un aperçu rapide de la mise en place d'une app registry JaskSSO dans Microsoft Entra pour établir une connexion entre Jask et la suite d'applications Microsoft de votre entreprise. Jask effectuera **toutes les opérations** dans la suite Microsoft **depuis l'app registry JaskSSO.**
+
+## Création de l'app registry JaskSSO
+
+<Steps>
+
+### Nouvelle app dans Microsoft Entra
+
+Ouvrez [le portail Microsoft Entra](https://entra.microsoft.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade/quickStartType~/null/sourceType/Microsoft_AAD_IAM) et connectez-vous avec votre compte administrateur puis rendez vous sur la page `Inscription d'application` depuis le menu à gauche.
+Cliquez sur `Nouvelle inscription` en haut à gauche pour créer une nouvelle applicaton.
+
+![Microsoft Entra](@public/microsoft/Microsoft-New-App.png)
+
+Nommez l'application `JaskSSO`.
+
+Récupérer les identifiants `Application (client) id` et `Directory (tenant) id` de l'application JaskSSO sur l'acceuil de l'application.
+
+![Microsoft Entra App ID](@public/microsoft/Microsoft-App-ID.png)
+
+### Récupérer la valeur du `Secret` de l'app registry `JaskSSO`
+
+Créer le secret de l'application en vous rendant dans `Certificates & secrets` dans le menu de gauche puis cliquez sur `Nouveau client secret`. Renseignez un nom par exemple `SecretSSO`pour le secret et une expiration puis cliquez sur `Add`. 
+
+<Callout type="info">
+Choisissez une date lointaine pour plus de tranquilité. Notez la date d'expiration pour recréer un secret au moment venu.
+</Callout>
+
+![Microsoft Entra Secret](@public/microsoft/Microsoft-New-Secret.png)
+
+Récupérer la `Valeur` du secret pour la suite.
+
+![Microsoft Entra Secret](@public/microsoft/Microsoft-Secret-Value.png)
+
+### Configurer les clés dans `Gestion des secrets` sur Jask
+Rendez vous sur Jask. Cliquez sur `Sécurité` dans le menu de gauche puis sur `Gestion des secrets`. Rentrer le nom `JaskSSO`, Séléctionnez `Connexion O365` puis ajoutez les identifiants récupérés à l'étape 1 et 2.
+Choisissez `Partagé` pour la visibilité de telle sorte à ce que Jask puisse utiliser cette clé pour faire des requêtes en delegated par la suite sur les sources Microsoft. Cliquez sur `Valider`.
+
+![Jask Secret Management](@public/microsoft/Jask-Secret-Management.png)
+
+</Steps>
+
+Vous avez maintenant configuré l'application JaskSSO dans Microsoft Entra et vous êtes prêt à connecter vos applications Microsoft à Jask.
+
+## Configurer les applications Microsoft disponibles
+
+Suivez la documentation des sources de données suivantes :
+
+<Cards>
+  <Cards.Card
+    title="Sharepoint"
+    href="microsoft/sharepoint"
+  />
+  <Cards.Card
+    title="OneNote (Personnal)"
+    href="microsoft/onenote"
+  />
+</Cards>

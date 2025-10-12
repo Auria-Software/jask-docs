@@ -1,0 +1,122 @@
+import { Callout } from 'nextra/components'
+import { Table } from 'nextra/components'
+
+
+# Gestion des rôles
+
+Les rôles dans jAsk donnent accès à des fonctionnalités ou des vues particulières. Ils s'appliquent aux comptes utilisateurs connus dans JAsk.
+
+<Callout type="info">
+Seul un utilisateur avec le droit `Utilisateurs` peut les gérer
+</Callout>
+
+## Tableau des rôles
+
+<Table>
+  <thead>
+    <Table.Tr>
+      <Table.Th>Rôle</Table.Th>
+      <Table.Th>Description</Table.Th>
+      <Table.Th>Recommandé pour</Table.Th>
+    </Table.Tr>
+  </thead>
+  <tbody>
+    <Table.Tr>
+      <Table.Td>Administrateur</Table.Td>
+      <Table.Td>Rôle d’administration de JAsk</Table.Td>
+      <Table.Td>
+        <span className="tag admin">Administrateur</span>
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>App Studio</Table.Td>
+      <Table.Td>Fonctionnalités liées à JAsk Apps Builder</Table.Td>
+      <Table.Td>
+        <span className="tag data">Data champion</span>,
+        <span className="tag collaborator">Collaborateur</span>
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>Applications</Table.Td>
+      <Table.Td>Permet de créer ou modifier des applications</Table.Td>
+      <Table.Td>
+        <span className="tag data">Data champion</span>,
+        <span className="tag collaborator">Collaborateur</span>
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>Assistants</Table.Td>
+      <Table.Td>Permet de créer ou modifier des Assistants</Table.Td>
+      <Table.Td>
+        <span className="tag data">Data champion</span>,
+        <span className="tag collaborator">Collaborateur</span>
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>Déploiement</Table.Td>
+      <Table.Td>Permet de déployer des Assistants pour un usage externe à JAsk</Table.Td>
+      <Table.Td>
+        <span className="tag admin">Administrateur</span>
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>Espace de travail</Table.Td>
+      <Table.Td>Droit minimal pour utiliser JAsk</Table.Td>
+      <Table.Td>
+        <span className="tag data">Data champion</span>,
+        <span className="tag admin">Administrateur</span>,
+        <span className="tag collaborator">Collaborateur</span>
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>KM Admin</Table.Td>
+      <Table.Td>Fonctionnalités liées à la gestion de JAsk for KM</Table.Td>
+      <Table.Td>
+        <span className="tag admin">Administrateur</span>,
+        <span className="tag data">Data champion</span>
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>Modèles IA</Table.Td>
+      <Table.Td>Permet de gérer les modèles d’IA utilisés dans JAsk</Table.Td>
+      <Table.Td>
+        <span className="tag admin">Administrateur</span>
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>Source de données</Table.Td>
+      <Table.Td>Permet de gérer les ressources auxquelles JAsk a accès</Table.Td>
+      <Table.Td>
+        <span className="tag admin">Administrateur</span>
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>Suivi des usages</Table.Td>
+      <Table.Td>Affichage et gestion des usages de JAsk</Table.Td>
+      <Table.Td>
+        <span className="tag data">Data champion</span>, 
+        <span className="tag admin">Administrateur</span>
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>Support Admin</Table.Td>
+      <Table.Td>Fonctionnalités liées à la gestion de JAsk for Support</Table.Td>
+      <Table.Td>
+        <span className="tag admin">Administrateur</span>
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>Templates</Table.Td>
+      <Table.Td>N/A</Table.Td>
+      <Table.Td>N/A</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>Utilisateurs</Table.Td>
+      <Table.Td>Permet de gérer les utilisateurs dans JAsk</Table.Td>
+      <Table.Td>
+        <span className="tag admin">Administrateur</span>,
+        <span className="tag data">Data champion</span>
+      </Table.Td>
+    </Table.Tr>
+  </tbody>
+</Table>

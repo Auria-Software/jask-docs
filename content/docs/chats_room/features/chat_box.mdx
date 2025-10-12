@@ -1,0 +1,52 @@
+import { Steps } from "nextra/components";
+import { Callout } from "nextra/components";
+
+# La Zone de Chat
+
+La zone de chat est l'endroit où vous pouvez interagir avec vos agents. Vous pouvez poser des questions, demander des clarifications ou explorer différents sujets en temps réel.
+
+![Chat Box](@public/chat_rooms/chatbox.png)
+
+Vous engagez une conversation avec votre Assistant en tapant le texte de votre question dans la zone de saisie en bas de la fenêtre principale. Une fois complète, la touche “Entrée” envoie la question à votre Assistant. Vous pouvez également cliquer sur l’icône d’envoi à la toute fin de la zone de saisie.
+
+## Les fonctionnalités de la zone de chat
+
+Trois fonctions sont accessibles depuis la zone de saisie :
+
+### Mes Préférences
+Vous pouvez personnaliser votre expérience de chat en accédant à `Mes Préférences`. Vous y trouverez des options pour ajuster le comportement de l'agent, le ton des réponses, et d'autres paramètres plus techniques pour mieux répondre à vos besoins.
+
+![preferences](@public/chat_rooms/preferences.png)
+
+<Steps>
+#### Temperature
+La température est un paramètre qui permet de contrôler la créativité de la réponse de l'assistant. Plus la température est élevée (proche de 1), plus la réponse est créative et moins elle est conforme à la question posée. Une température élevée signifie que pour une même question, l'agent peut répondre de manière différente à chaque fois.
+
+#### Personnaliser la diversité & Maximum de documents
+Vous pouvez choisir la diversité de la réponse de l'agent. La diversité est un paramètre qui permet de contrôler la variété des réponses de l'agent. Plus la diversité est élevée, plus les réponses sont variées.
+Vous pouvez également choisir le nombre de documents maximum que l'agent peut récupérer dans ses sources à chaque requête pour répondre à votre question.
+
+#### Deep Research
+Vous pouvez choisir si l'agent doit faire une recherche profonde avant de répondre à votre question.
+Si l'option est activée, l'agent passe en mode "Deep Research". Cela permet à l'agent de planifier et d'exécuter une suite d'actions en plusieurs étapes pour trouver les données dont elle a besoin, en revenant sur ses pas et en réagissant aux informations en temps réel si nécessaire.
+Cette option est efficace pour des questions complexes qui nécessitent une recherche approfondie.
+
+#### Instructions personnalisées
+Vous pouvez également ajouter des instructions personnalisées à l'agent pour lui donner des instructions spécifiques à suivre lors de sa réponse.
+<Callout>
+Ces instructions seront additionnées à celles déjà présentes dans la configuration du prompt système de l'agent.
+</Callout>
+
+</Steps>
+
+### Prompts Store
+
+Vous avez accès au Prompts Store qui vous offre une collection de prompts utiles immédiatement utilisables dans vos conversations. Vous bénéficiez ainsi de la puissance des prompts communs dans votre organisation.
+
+![ps](@public/chat_rooms/promptstore.png)
+
+### Suggestion de questions
+
+Si l'option  de suggestion de questions liées a été activée sur l'assistant, des questions qui pourraient s’avérer pertinentes dans votre contexte seront proposées. Elles sont immédiatement accessibles au-dessus de la zone de saisie une fois la conversation entamée avec votre Assistant. N’hésitez pas à les utiliser pour approfondir davantage vos ressources.
+
+![followup](@public/chat_rooms/followup.png)
