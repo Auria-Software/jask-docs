@@ -25,18 +25,18 @@ Cet article vous donnera les étapes pour installer le plugin JAsk sur Excel et 
 
 Dans Excel, ouvrer le menu `Insérer` puis `Compléments` et `Mes compléments`
 
-![Microsoft Entra](@public/microsoft/Microsoft-New-App.png)
+![add_plugin](@public/excel/add_plugin.png)
 
 ### Sélectionner le plugin mis à disposition par l'administrateur
 
 Rendez-vous sur l'onglet `Géré par l'administrateur`, sélectionnez le plugin `JAsk Excel Add-in` puis cliquez sur `Ajouter`.
 
-![Microsoft Entra Secret](@public/microsoft/Microsoft-New-Secret.png)
+![add_plugin2](@public/excel/add_plugin2.png)
 
 ### Connecter vous avec Microsoft
 Suivez la procédure de connexion avec Microsoft
 
-![Jask Secret Management](@public/microsoft/Jask-Secret-Management.png)
+![login](@public/excel/login.png)
 
 </Steps>
 
@@ -60,12 +60,16 @@ Le mode Traitement est idéal pour faire un appel multiple à un Agent créé su
 5- Cliquez sur `Ajouter sortie`, les cellules en sortie sont ajoutées
 6- Cliquez ensuite sur `Appliquer JASK`, l'agent sélectionné est appelé pour remplir les cellules en sortie par rapport aux cellules en entrée
 
+![treatment_mode](@public/excel/treatment_mode.png)
+
 ### Formule
 
 Dans le tableur, après avoir sélectionné un agent dans le plugin Excel, vous pouvez utiliser la formule `=JASK()` afin de faire appel à l'agent.
 Cette formule prend en entrée une cellule, contenant l'élément à prendre en entrée par l'agent, à laquelle vous pouvez ajouter une instruction supplémentaire afin de donner une indication à l'agent.
 
 Une fois la formule écrite, vous pouvez l'étirer pour l'appliquer à une plage de cellules.
+
+![formula_mode](@public/excel/formula_mode.png)
 
 ### Mode Conversation
 
@@ -74,5 +78,5 @@ Le mode Conversation permet d'accéder à des agents sans remplir de cellules du
 2- Sélectionner des cellules du tableur et poser votre question à l'agent
 3- Cliquer sur `Envoyer` ou appuyer sur `Entrée`, l'agent sélectionné est appelé pour répondre à votre question à laquelle il répondra dans le chat.
 
-
+![chat_mode](@public/excel/chat_mode.png)
 
