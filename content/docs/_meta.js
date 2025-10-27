@@ -15,13 +15,18 @@ export default {
     workbooks:"Carnets de travail",
     _2: {
         type: 'separator',
+        title: 'Plugins Externes',
+    },
+    excel:"Plugin Excel",
+    _3: {
+        type: 'separator',
         title: 'Catalogue',
     },
     prompts_store: "Prompts Store",
     assistants: "Assistants",
     applications: "Applications",
     experiences: <div key="experiences">Expériences {newLabel}</div>,
-    _3: {
+    _4: {
         type: 'separator',
         title: 'Administration',
     },
