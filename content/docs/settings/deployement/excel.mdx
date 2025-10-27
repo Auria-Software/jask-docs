@@ -1,22 +1,28 @@
+import { Callout } from "nextra/components";
+
 # Installation du plugin Excel JAsk pour vos utilisateurs Microsoft
 
 <Callout type="warning">
-Cette étape est **obligatoire** pour mettre le plugin à disposition de vos utilisateurs.
+  Cette étape est **obligatoire** pour mettre le plugin à disposition de vos
+  utilisateurs.
 </Callout>
 
 Vos utilisateurs devront ensuite suivre cette [procédure](/docs/excel) pour accèder au plugin.
 
 ## Accèder à l'Admin Center Microsoft 365
+
 - Rendez-vous sur cette adresse : https://admin.microsoft.com
 - Allez dans Settings > Integrated apps
 
 ## Importer l'app
+
 - Cliquez sur `Upload custom apps`
 - Sélectionnez `Office Add-in`
 - Choissisez `Upload manifest file from device`
 - Importez `manifest.xml` que vous avez reçu de JAsk
 
 ### Assigner des utilisateurs
+
 - Sélectionnez les utilisateurs/groupes qui pourront accèder au plugin
 - Choissisez entre les options `Entire organization` ou `Specific users`
 - Cliquez sur `Deploy`
