@@ -30,9 +30,8 @@ env:
   AZURE_WEBAPP_NAME: docs-dev-auria-jask-sw-01 # set this to the name of your Azure Web App
 
 on:
-  push:
-    tags:
-      - 'v*'
+  release:
+    types: [published]
   workflow_dispatch:
 
 permissions:
