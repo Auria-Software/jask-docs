@@ -39,7 +39,7 @@ Sites.Selected
 
 ![scopes](@public/sharepoint/scopes.png)
 
-Vous devez valider le consentement de l'administrateur pour cette autorsation d'api. Vous verrez la validation dans la colonne `Status`.
+Vous devez valider le consentement de l'administrateur pour cette autorisation d'api. Vous verrez la validation dans la colonne `Status`.
 
 <Callout type="warning" emoji="⚠️">
   Vous devez être administrateur ou avoir l'accord d'un **administrateur** pour
@@ -52,9 +52,9 @@ Vous devez valider le consentement de l'administrateur pour cette autorsation d'
 
 <Callout type="warning">
   Jask utilisera `JaskAdmin`uniquement pour **donner les droits d'accès** à
-  `JaskSSO` depuis la console `source de données` dans Jask. **Jask ne passera
+  `JaskSSO` depuis la console `Sources de données` dans Jask. **Jask ne passera
   jamais par `JaskAdmin`** pour accéder aux sites SharePoint. Cette étape est
-  **obligatoire** pour pouvoir **donner accès à Jask** d'accéder à des sites
+  **obligatoire** pour pouvoir **donner l'autorisation à Jask** d'accéder à des sites
   SharePoint de votre organisation via `JaskSSO`.
 </Callout>
 
@@ -65,13 +65,13 @@ Cliquez sur `Nouvelle inscription` en haut à gauche pour créer une nouvelle ap
 
 ![Microsoft Entra](@public/microsoft/Microsoft-New-App.png)
 
-Récupérer les identifiants `Application (client) id` et `Directory (tenant) id` de l'application JaskAdmin sur l'acceuil de l'application.
+Récupérez les identifiants `Application (client) id` et `Directory (tenant) id` de l'application JaskAdmin sur l'accueil de l'application.
 
 ![Microsoft Entra App ID](@public/microsoft/Microsoft-App-ID.png)
 
 **2. Récupérer la valeur du `Secret` de l'app registry `JaskAdmin`**
 
-Créer le secret de l'application en vous rendant dans `Certificates & secrets` dans le menu de gauche puis cliquez sur `Nouveau client secret`. Renseignez un nom par exemple `SecretAdmin`pour le secret et une expiration puis cliquez sur `Add`.
+Créez le secret de l'application en vous rendant dans `Certificates & secrets` dans le menu de gauche puis cliquez sur `Nouveau client secret`. Renseignez un nom par exemple `SecretAdmin`pour le secret et une expiration puis cliquez sur `Add`.
 
 <Callout type="info">
   Choisissez une date lointaine pour plus de tranquilité. Notez la date
@@ -80,14 +80,14 @@ Créer le secret de l'application en vous rendant dans `Certificates & secrets` 
 
 ![Microsoft Entra Secret](@public/microsoft/Microsoft-New-Secret.png)
 
-Récupérer la `Valeur` du secret pour la suite.
+Récupérez la `Valeur` du secret pour la suite.
 
 ![Microsoft Entra Secret](@public/microsoft/Microsoft-Secret-Value.png)
 
 **3. Ajouter l'autorisation d'API à l'app registry `JaskAdmin`**
 
-Naviguer dans `API autorisées` sur le menu de gauche puis cliquez sur le bouton `Ajouter une autorisation`.
-Choisissez `Autorisations d'application` et selectionnez dans la liste l'autorisation `Sites.FullControl.All`
+Naviguez dans `API autorisées` sur le menu de gauche puis cliquez sur le bouton `Ajouter une autorisation`.
+Choisissez `Autorisations d'application` et sélectionnez dans la liste l'autorisation `Sites.FullControl.All`
 
 ```note filename="Scope (Autorisations d'application)"
 Sites.FullControl.All
@@ -95,7 +95,7 @@ Sites.FullControl.All
 
 ![scopes](@public/sharepoint/scopes.png)
 
-Vous devez valider le consentement de l'administrateur pour cette autorsation d'api. Vous verrez la validation dans la colonne `Status`.
+Vous devez valider le consentement de l'administrateur pour cette autorisation d'API. Vous verrez la validation dans la colonne `Status`.
 
 <Callout type="warning" emoji="⚠️">
   Vous devez être administrateur ou avoir l'accord d'un **administrateur** pour
@@ -106,9 +106,9 @@ Vous devez valider le consentement de l'administrateur pour cette autorsation d'
 
 **4. Configurer les clés dans `Gestion des secrets` sur Jask**
 
-Rendez vous sur Jask. Cliquez sur `Sécurité` dans le menu de gauche puis sur `Gestion des secrets`. Rentrer le nom `JaskAdmin`, Séléctionnez `Connexion O365` puis ajoutez les identifiants récupérés à l'étape 1 et 2.
+Rendez vous sur Jask. Cliquez sur `Sécurité` dans le menu de gauche puis sur `Gestion des secrets`. Rentrez le nom `JaskAdmin`, sélectionnez `Connexion O365` puis ajoutez les identifiants récupérés à l'étape 1 et 2.
 
-Choisissez la visibilité en fonction de qui peut utiliser cette clé pour donner les droits à `JaskSSO`. Nous vous conseillons de la partager qu'aux administrateurs connectant les sites sharepoints. Cliquez sur `Valider`.
+Choisissez la visibilité en fonction de qui peut utiliser cette clé pour donner les droits à `JaskSSO`. Nous vous conseillons de la partager qu'aux administrateurs connectant les sites SharePoint. Cliquez sur `Valider`.
 
 ![Jask Secret Management](@public/microsoft/Jask-Secret-Management.png)
 
@@ -131,11 +131,11 @@ Renseignez les informations générales de la source de données.
 
 ![source de données](@public/sharepoint/info.png)
 
-Séléctionnez `Connexions existantes` pour utiliser les secrets enregistrés dans Jask.
-Séléctionnez le secret `...Admin` pour pouvoir rechercher l'entièreté des sites SharePoint de votre organisation car les droits le permettent.
+Sélectionnez `Connexions existantes` pour utiliser les secrets enregistrés dans Jask.
+Sélectionnez le secret `...Admin` pour pouvoir rechercher l'entièreté des sites SharePoint de votre organisation car les droits le permettent.
 ![connectivité](@public/sharepoint/connection.png)
 
-Rechercher le site SharePoint que vous voulez connecter à Jask à l'aide de la barre de recherche.
+Recherchez le site SharePoint que vous voulez connecter à Jask à l'aide de la barre de recherche.
 
 ![connectivité](@public/sharepoint/search.png)
 
@@ -148,7 +148,7 @@ Cliquez sur Suivant puis `Donner les droits d'accès` pour donner les droits d'a
 
 ![connectivité](@public/sharepoint/access.png)
 
-Séléctionnez le type de ressource `Drive`, `Liste` ou `Page ASPX` puis séléctionnez la ressource en question et testez la connexion.
+Sélectionnez le type de ressource `Drive`, `Liste` ou `Page ASPX` puis sélectionnez la ressource en question et testez la connexion.
 
 ![connectivité](@public/sharepoint/type.png)
 
@@ -164,15 +164,15 @@ Cliquez sur le bouton `Revoir et Créer` pour valider la configuration.
   manuellement.
 </Callout>
 
-Si vous souhaitez utiliser rapidement la source de données, vous pouvez lancer l'indexation manuellement. Cliquez sur les trois points à droite de la source de données puis sur le bouton numéro 2 sur le screenshot ci-dessous pour `Scanner`. Raffraichissez le tableau avec le bouton numéro 3 si le scan prend trop de temps. Enfin cliquez sur le bouton numéro 4 `Indexer` pour lancer l'indexation.
+Si vous souhaitez utiliser rapidement la source de données, vous pouvez lancer l'indexation manuellement. Cliquez sur les trois points à droite de la source de données puis sur le bouton numéro 2 sur le screenshot ci-dessous pour `Scanner`. Rafraichissez le tableau avec le bouton numéro 3 si le scan prend trop de temps. Enfin cliquez sur le bouton numéro 4 `Indexer` pour lancer l'indexation.
 
 ![connectivité](@public/sharepoint/index.png)
 
 </Steps>
 
-## Utilisation du Sharepoint dans Jask
+## Utilisation du SharePoint dans Jask
 
-Vous pouvez utiliser cette **nouvelle source de données Sharepoint** dans les ressources Jask pour créer des cas d'usage basés sur les données de votre organisation.
+Vous pouvez utiliser cette **nouvelle source de données SharePoint** dans les ressources Jask pour créer des cas d'usage basés sur les données de votre organisation.
 Suivez la documentation suivante pour utiliser cette source dans les différentes ressources de Jask :
 
 <Cards>
